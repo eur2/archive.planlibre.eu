@@ -2,6 +2,7 @@
 	export let data;
 	const { posts } = data;
 	import Front from '$lib/Front.svelte';
+	import Front200 from '$lib/Front200.svelte';
 	import Post from '$lib/Post.svelte';
 	let randomPost = '';
 	let searchTerm = '';
@@ -46,19 +47,9 @@
 	});
 </script>
 
-<Front>
-	{#if randomPost && randomPost.acf.image}
-		<!-- <img src="{randomPost.acf.image.sizes.large}" width="800" alt="plan libre" /> -->
-		<img
-			src={randomPost.acf.image.sizes.large}
-			srcset="{randomPost.acf.image.sizes.thumbnail} 400w, {randomPost.acf.image.sizes
-				.medium} 800w, {randomPost.acf.image.sizes.large} 1600w"
-			width="800"
-			height="600"
-			alt="plan libre journal"
-		/>
-	{/if}
-</Front>
+<!-- <<Front {randomPost} /> -->
+
+<Front200 />
 <nav class="sticky t0 p251251 bg-white flex jc-sb">
 	<form role="search">
 		<input

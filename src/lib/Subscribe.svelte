@@ -6,12 +6,16 @@
 </script>
 
 <footer>
-	<div class="bc fixed b0 r0 z200 m600-l0 center">
-		<button
-			class="p251251 {visible ? 'none' : ''}"
-			on:click={handleToggle}
-			on:keydown={handleToggle}
+	<div class="bc fixed b0 l0 r0 z200 flex">
+		<a
+			class="p251251 flex1 center {visible ? 'none' : ''}"
+			style="background-color:black;color:fuchsia;"
+			rel="noreferrer"
+			target="_blank"
+			href="https://www.helloasso.com/associations/maison-de-l-architecture-occitanie-pyrenees/collectes/200-plan-libre-anatomie-d-un-journal-d-architecture-en-prevente 
+		">+++Prévente <i>200 Plan Libre+++</i></a
 		>
+		<button class="p251251 flex1 center {visible ? 'none' : ''}" on:click={handleToggle}>
 			+++Abonnement à <i>Plan Libre</i> 25€+++
 		</button>
 		{#if visible}
@@ -23,17 +27,6 @@
 				</div>
 				<slot />
 				<div class="flex wrap jc-center">
-					<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="DET375QCYNA9U">
-        <table class="none">
-        <tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
-          <option value="Abonnement annuel">Abonnement annuel : €25,00 EUR - annuel</option>
-        </select> </td></tr>
-        </table>
-        <input type="hidden" name="currency_code" value="EUR">
-        <input type="submit" class="btn" value="S’abonner">
-        </form> -->
 					<a
 						rel="noreferrer"
 						target="_blank"

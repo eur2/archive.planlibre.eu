@@ -33,12 +33,13 @@ footer p a:hover {
 p a,
 h1 a {
 	text-decoration: underline;
+	text-decoration-style:dotted;
+
 }
-p a:hover,
-h1 a:hover,
-.article:hover {
-	text-decoration: underline;
-	color: #ff00ff;
+a:hover,
+.article:hover, .color {
+	color: fuchsia;
+	text-decoration: none;
 }
 p,
 h1 {
@@ -46,7 +47,7 @@ h1 {
 	margin-block-end: 1em;
 }
 .bc {
-	background-color: #ff00ff;
+	background-color: fuchsia;
 }
 .bg-white {
 	background-color: white;
@@ -283,7 +284,7 @@ article header:hover a {
 	.content {
 		flex-direction: column;
 	}
-	.m600-l0 {
+	.sm-l0 {
 		left: 0;
 	}
 }
