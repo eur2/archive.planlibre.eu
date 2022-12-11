@@ -1,5 +1,5 @@
 <script>
-	export let title, num, date, pdf, cover;
+	export let post;
 	let visible, hovering;
 	function handleToggle() {
 		visible = !visible;
@@ -19,22 +19,23 @@
 		on:mouseenter={enter}
 		on:mouseleave={leave}
 	>
-		<h2 class="flex1">PL {num}</h2>
+		<h2 class="flex1">PL {post.acf.num}</h2>
 		<h2 class="flex2">
-			{#if title === ''}*****{:else}{title}{/if}
+			{#if post.acf.title === ''}*****{:else}{post.acf.title}{/if}
 		</h2>
-		<h2 class="flex2">{date}</h2>
+		<h2 class="flex2">{post.acf.date}</h2>
 		<h2 class="flex0">
-			<a rel="noreferrer" target="_blank" href={pdf}>PDF</a>
+			<a rel="noreferrer" target="_blank" href={post.acf.pdf}>PDF</a>
 		</h2>
 	</header>
 	{#if hovering}
-		<div class="w50 absolute z10 flex jc-center ai-center">
-			<img src={cover} width="300" alt="PL{num}" />
-		</div>
+		{#if post.acf.cover}
+			<div class="w50 absolute z10 flex jc-center ai-center">
+				<img src={post.acf.cover.sizes.thumbnail} width="300" alt="PL{post.acf.num}" />
+			</div>
+		{/if}
 	{/if}
 	{#if visible}
-		<!-- <div class={visible ? "block" : "none"}> -->
 		<div>
 			<slot />
 		</div>

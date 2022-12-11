@@ -1,7 +1,7 @@
 <script>
 	export let data;
 	const { posts } = data;
-	import Front from '$lib/Front.svelte';
+	// import Front from '$lib/Front.svelte';
 	import Front200 from '$lib/Front200.svelte';
 	import Post from '$lib/Post.svelte';
 	let randomPost = '';
@@ -20,31 +20,10 @@
 			post.acf.article4.author.toLowerCase().indexOf(searchTerm) !== -1 ||
 			post.acf.article4.title.toLowerCase().indexOf(searchTerm) !== -1
 	);
-	import { onMount } from 'svelte';
-	onMount(() => {
-		randomPost = posts[Math.floor(Math.random() * 20)];
-		// var lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
-		// if (typeof IntersectionObserver !== "undefined") {
-		//   let lazyImageObserver = new IntersectionObserver(function (
-		//     entries,
-		//     observer
-		//   ) {
-		//     entries.forEach(function (entry) {
-		//       if (entry.isIntersecting) {
-		//         let lazyImage = entry.target;
-		//         lazyImage.src = lazyImage.dataset.src;
-		//         lazyImage.srcset = lazyImage.dataset.srcset;
-		//         lazyImage.classList.remove("lazy");
-		//         lazyImage.classList.add("loaded");
-		//         lazyImageObserver.unobserve(lazyImage);
-		//       }
-		//     });
-		//   });
-		//   lazyImages.forEach(function (lazyImage) {
-		//     lazyImageObserver.observe(lazyImage);
-		//   });
-		// }
-	});
+	// import { onMount } from 'svelte';
+	// onMount(() => {
+	// 	randomPost = posts[Math.floor(Math.random() * 20)];
+	// });
 </script>
 
 <!-- <<Front {randomPost} /> -->
@@ -64,26 +43,10 @@
 </nav>
 <main>
 	{#each filteredPosts as post}
-		<Post
-			num={post.acf.num}
-			title={post.acf.title}
-			date={post.acf.date}
-			pdf={post.acf.pdf}
-			cover={post.acf.cover.sizes.thumbnail}
-		>
+		<Post {post}>
 			<div class="content flex">
 				{#if post.acf.image}
 					<div class="p flex jc-center flex50">
-						<!-- <img
-				class="lazy"
-				src=""
-				data-src={post.acf.image.sizes.large}
-				srcset=""
-				data-srcset="{post.acf.image.sizes.thumbnail} 400w, {post.acf
-				  .image.sizes.medium} 800w, {post.acf.image.sizes.large} 1600w"
-				alt="Plan Libre {post.acf.num}"
-			  /> -->
-						<!-- <img src={post.acf.image.sizes.large} alt="plan libre" /> -->
 						<img
 							src={post.acf.image.sizes.large}
 							srcset="{post.acf.image.sizes.thumbnail} 400w, {post.acf.image.sizes
