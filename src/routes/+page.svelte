@@ -4,7 +4,7 @@
 	// import Front from '$lib/Front.svelte';
 	import Front200 from '$lib/Front200.svelte';
 	import Post from '$lib/Post.svelte';
-	let randomPost = '';
+	// let randomPost = '';
 	let searchTerm = '';
 	$: filteredPosts = posts.filter(
 		(post) =>
