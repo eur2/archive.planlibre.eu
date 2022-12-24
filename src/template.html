@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#ff00ff" />
+  <link rel="preload" href="subset-SelfModern-Regular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="subset-SelfModern-Italic.woff2" as="font" crossorigin="anonymous" />
+  %sapper.base%
+
+  <link rel="stylesheet" href="global.css" />
+  <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="logo-192.png">
+  <title>
+    Plan Libre - Journal de la Maison de l'Architecture Occitanie-Pyrénées
+  </title>
+  <meta name="description" content="Journal de la Maison de l'Architecture Occitanie-Pyrénées" />
+  <meta name="og:title" content="Plan Libre" />
+  <meta name="og:description" content="Journal de la Maison de l'Architecture Occitanie-Pyrénées" />
+  <meta name="og:type" content="website" />
+  <meta name="og:image" content="logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Plan Libre" />
+  <meta name="twitter:description" content="Journal de la Maison de l'Architecture Occitanie-Pyrénées" />
+  <meta name="twitter:image" content="logo.png" />
+
+  <!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+  %sapper.styles%
+
+  <!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+  %sapper.head%
+
+  <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141588777-2"
+    ></script> -->
+  <!-- <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-141588777-2");
+    </script> -->
+</head>
+
+<body>
+  <!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+  <div id="sapper">%sapper.html%</div>
+
+  <!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
+  %sapper.scripts%
+</body>
+
+</html>
