@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#ff00ff" />
+	<link rel="preload" href="subset-SelfModern-Regular.woff2" as="font" crossorigin="anonymous" />
+	<link rel="preload" href="subset-SelfModern-Italic.woff2" as="font" crossorigin="anonymous" />
+	<link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+	<link rel="apple-touch-icon" href="/logo-192.png">
+	<title>
+		Plan Libre - Journal de la Maison de l'Architecture Occitanie-Pyrénées
+	</title>
+	<meta name="description" content="Journal de la Maison de l'Architecture Occitanie-Pyrénées" />
+	<meta name="og:title" content="Plan Libre" />
+	<meta name="og:description" content="Journal de la Maison de l'Architecture Occitanie-Pyrénées" />
+	<meta name="og:type" content="website" />
+	<meta name="og:image" content="logo.png" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Plan Libre" />
+	<meta name="twitter:description" content="Journal de la Maison de l'Architecture Occitanie-Pyrénées" />
+	<meta name="twitter:image" content="logo.png" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141588777-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+		gtag("config", "UA-141588777-2");
+	</script>
+	<style>
+		@font-face {
+			font-family: 'Self Modern';
+			src: url('subset-SelfModern-Regular.woff') format('woff');
+			src: url('subset-SelfModern-Regular.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+			font-display: fallback;
+		}
+
+		@font-face {
+			font-family: 'Self Modern';
+			src: url('subset-SelfModern-Italic.woff') format('woff');
+			src: url('subset-SelfModern-Italic.woff2') format('woff2');
+			font-weight: normal;
+			font-style: italic;
+			font-display: fallback;
+		}
+	</style>
+
+	%svelte.head%
+</head>
+
+<body>
+	<div id="svelte">%svelte.body%</div>
+</body>
+
+</html>
