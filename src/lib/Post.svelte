@@ -18,6 +18,8 @@
 		on:keydown={handleToggle}
 		on:mouseenter={enter}
 		on:mouseleave={leave}
+		role="button"
+		tabindex="0"
 	>
 		<h2 class="flex1">PL {post.acf.num}</h2>
 		<h2 class="flex2">

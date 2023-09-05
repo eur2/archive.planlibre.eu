@@ -2,7 +2,7 @@
 	export let data;
 	const { posts } = data;
 	// import Front from '$lib/Front.svelte';
-	import Front200 from '$lib/Front200.svelte';
+	import Splash from '$lib/Splash.svelte';
 	import Post from '$lib/Post.svelte';
 	// let randomPost = '';
 	let searchTerm = '';
@@ -28,7 +28,7 @@
 
 <!-- <<Front {randomPost} /> -->
 
-<Front200 />
+<Splash />
 <nav class="sticky t0 p251251 bg-white flex jc-sb">
 	<form role="search">
 		<input
