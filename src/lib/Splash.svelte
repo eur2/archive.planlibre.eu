@@ -29,9 +29,9 @@
 </div>
 
 <style>
-	#a1:hover {
+	/* #a1:hover {
 		filter: invert(1);
-	}
+	} */
 	/* #a1:hover + .hide {
 		display: block;
 	} */
