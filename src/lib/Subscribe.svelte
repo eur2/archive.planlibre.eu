@@ -16,13 +16,13 @@
 			>+++<i>200 Plan Libre+++</i>, le livre</a
 		>
 		<button class="p251251 flex1 center {visible ? 'none' : ''}" on:click={handleToggle}>
-			+++Abonnement à <i>Plan Libre</i> 25€+++
+			+++Abonnement à <i>Plan Libre</i> 30€+++
 		</button>
 		{#if visible}
 			<div class="p">
 				<div class="flex jc-sb">
 					<span />
-					<h3>+++Abonnement annuel/4 numéros/25€+++</h3>
+					<h3>+++Abonnement annuel/4 numéros/30€+++</h3>
 					<button on:click={handleToggle}>×</button>
 				</div>
 				<slot />
