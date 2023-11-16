@@ -33,11 +33,11 @@ footer p a:hover {
 p a,
 h1 a {
 	text-decoration: underline;
-	text-decoration-style:dotted;
-
+	text-decoration-style: dotted;
 }
 a:hover,
-.article:hover, .color {
+.article:hover,
+.color {
 	color: fuchsia;
 	text-decoration: none;
 }
@@ -259,7 +259,7 @@ article header:hover a {
 	word-wrap: break-word;
 	hyphens: auto;
   } */
-  #a1:hover {
+#a1:hover {
 	filter: invert(1);
 }
 @media only screen and (max-width: 960px) {
