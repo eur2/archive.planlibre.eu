@@ -1,17 +1,16 @@
 <script>
-	import './styles.css';
-	export let data;
-	const { header, subscribe } = data;
-	import Header from '$lib/Header.svelte';
-	import Subscribe from '$lib/Subscribe.svelte';
-	import Logo from '$lib/Logo.svelte';
+ import "./styles.css";
+ let { data, children } = $props();
+ import Header from "$lib/Header.svelte";
+ import Subscribe from "$lib/Subscribe.svelte";
+ import Logo from "$lib/Logo.svelte";
 </script>
 
 <Header>
-	{@html header.content.rendered}
+	{@html data.header[0].content.rendered}
 </Header>
-<slot />
+{@render children()}
 <Logo />
 <Subscribe>
-	{@html subscribe.content.rendered}
+	{@html data.subscribe[0].content.rendered}
 </Subscribe>

@@ -1,3 +1,6 @@
+<script>
+ let { children } = $props();
+</script>
 <header>
   <div class="absolute z2" style="top: 0.5em; right: 1em;">
     <a href="https://maop.fr/">
@@ -27,6 +30,6 @@
     </a>
   </div>
   <div class="relative z10 p0111">
-    <slot></slot>
+   {@render children()}
   </div>
 </header>
